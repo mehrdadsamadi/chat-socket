@@ -3,13 +3,12 @@
     <div class="flex-1" dir="rtl">
       <!-- Chat Messages -->
       <div class="h-screen overflow-y-auto p-4 pb-36">
-          <!-- Incoming Message -->
+          <!-- Message Container -->
           <div v-for="(message, index) in messages" :key="index" class="flex mb-4 cursor-pointer" :class="{'justify-end': message.type === 'received'}">
             <div class="flex flex-col max-w-96 bg-pink-500 text-white rounded-lg p-3 gap-3" :class="{'!bg-indigo-500': message.type === 'sent'}">
               <p class="text-start">{{message.text}}</p>
               <div class="flex gap-2 items-center text-sm text-start">
                 <strong>{{ message.type === 'received' ? 'ارسال در زمان' : 'دریافت در زمان' }}</strong> 
-
                 <span>{{ message.time }}</span>
               </div>
             </div>
@@ -74,6 +73,3 @@ export default {
   }
 };
 </script>
-
-<style>
-</style>
