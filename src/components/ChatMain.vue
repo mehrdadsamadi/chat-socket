@@ -8,7 +8,7 @@
             <div class="flex flex-col max-w-96 bg-pink-500 text-white rounded-lg p-3 gap-3" :class="{'!bg-indigo-500': message.type === 'sent'}">
               <p class="text-start">{{message.text}}</p>
               <div class="flex gap-2 items-center text-sm text-start">
-                <strong>{{ message.type === 'received' ? 'ارسال در زمان' : 'دریافت در زمان' }}</strong> 
+                <strong>{{ message.type === 'received' ? 'دریافت در زمان' : 'ارسال در زمان' }}</strong> 
                 <span>{{ message.time }}</span>
               </div>
             </div>
